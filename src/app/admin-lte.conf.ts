@@ -36,7 +36,7 @@ export const adminLteConf = {
 
     {label: 'ADMINISTRATEUR', separator: true},
 
-    {label: 'Site administrateur', route: '#', iconClasses: 'fa fa-code'},
+    {label: 'Administration du site', route: 'administration', iconClasses: 'fa fa-code'},
 
 
     // {label: 'Forums', iconClasses: 'fa fa-th-list', children:[

@@ -39,13 +39,7 @@ const routes: Routes = [
       title: 'Social'
       }
     },
-    {
-      path: 'social_actualite',
-      loadChildren: './social/actualite/actualite.module#ActualiteModule',
-      data: {
-      title: 'Fil dactualité'
-      }
-    },
+    
     {
       path: 'message',
       loadChildren: './message/message.module#MessageModule',
@@ -72,14 +66,60 @@ const routes: Routes = [
           data: {
             title: 'Suivi'
           }
+        }, 
+      ]
+    },
+    {
+      path: 'pack',
+      loadChildren: './pack/pack.module#PackModule',
+      data: {
+        title: 'Packs'
+      }
+    },
+    {
+      path: 'pack',
+      loadChildren: './pack/pack.module#PackModule',
+      data: {
+        title: 'Packs'
+      }
+    }
+    ,{
+      path: 'administration',
+      loadChildren: './administration/administration.module#AdministrationModule',
+      data: {
+        title: 'Administration'
+      }
+    },
+    {
+      path: 'social_actualite',
+      loadChildren: './social/actualite/actualite.module#ActualiteModule',
+      data: {
+      title: 'Fil dactualité'
+      }
+    },
+
+
+
+    {
+      path: 'social',
+      data: {
+        title: 'Social',
+      },
+      children: [
+        {
+          path: 'actualite',
+          loadChildren: './+forums/libre/libre.module#LibreModule',
+          data: {
+            title: 'Libre'
+          }
         },
         {
-          path: 'pack',
-          loadChildren: './pack/pack.module#PackModule',
+          path: 'suivi',
+          loadChildren: './+forums/suivi/suivi.module#SuiviModule',
           data: {
-            title: 'Packs'
+            title: 'Suivi'
           }
-        } 
+        }, 
       ]
     },
 
@@ -88,8 +128,10 @@ const routes: Routes = [
 
 
 
+
     ]
   }, 
+
 
 
 
