@@ -91,40 +91,19 @@ const routes: Routes = [
       }
     },
     {
-      path: 'social_actualite',
+      path: 'actualite',
       loadChildren: './social/actualite/actualite.module#ActualiteModule',
       data: {
       title: 'Fil dactualité'
       }
     },
-
-
-
     {
-      path: 'social',
+      path: 'ami',
+      loadChildren: './social/ami/ami.module#AmiModule',
       data: {
-        title: 'Social',
-      },
-      children: [
-        {
-          path: 'actualite',
-          loadChildren: './+forums/libre/libre.module#LibreModule',
-          data: {
-            title: 'Libre'
-          }
-        },
-        {
-          path: 'suivi',
-          loadChildren: './+forums/suivi/suivi.module#SuiviModule',
-          data: {
-            title: 'Suivi'
-          }
-        }, 
-      ]
+      title: 'Amis'
+      }
     },
-
-
-
 
 
 
