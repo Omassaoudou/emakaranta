@@ -40,6 +40,13 @@ const routes: Routes = [
       }
     },
     {
+      path: 'social_actualite',
+      loadChildren: './social/actualite/actualite.module#ActualiteModule',
+      data: {
+      title: 'Fil dactualité'
+      }
+    },
+    {
       path: 'message',
       loadChildren: './message/message.module#MessageModule',
       data: {
@@ -65,7 +72,14 @@ const routes: Routes = [
           data: {
             title: 'Suivi'
           }
-        }, 
+        },
+        {
+          path: 'pack',
+          loadChildren: './pack/pack.module#PackModule',
+          data: {
+            title: 'Packs'
+          }
+        } 
       ]
     },
 

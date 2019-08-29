@@ -20,9 +20,11 @@ export const adminLteConf = {
 
     // {label: 'Messages', route: 'message', iconClasses: 'fa fa-text'},
 
-    {label: 'FORUMS', separator: true},
-    {label: 'Forum libre', route: 'forums/libre',iconClasses: 'fa fa-comments'},
-    {label: 'Forum suivi', route: 'forums/suivi',iconClasses: 'fa fa-comments'},
+   
+    {label: 'Forums', iconClasses: 'fa fa-comments', children: [
+      {label: 'Libre', route: 'forums/libre'},
+      {label: 'Suivi', route: 'forums/suivi'}
+    ]},
 
     {label: 'RESEAUX SOCIAUX', separator: true},
 
@@ -30,7 +32,7 @@ export const adminLteConf = {
 
     {label: 'ABONNEMENTS', separator: true},
 
-    {label: 'Packs', route: 'social', iconClasses: 'fa fa-shopping-cart'},
+    {label: 'Packs', route: 'pack', iconClasses: 'fa fa-shopping-cart'},
 
     {label: 'ADMINISTRATEUR', separator: true},
 
