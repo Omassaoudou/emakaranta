@@ -33,21 +33,6 @@ const routes: Routes = [
       }
     },
     {
-      path: 'social',
-      loadChildren: './social/social.module#SocialModule',
-      data: {
-      title: 'Social'
-      }
-    },
-    
-    {
-      path: 'message',
-      loadChildren: './message/message.module#MessageModule',
-      data: {
-      title: 'Messages'
-      }
-    },
-    {
       path: 'forums',
       data: {
         title: 'Forums',
@@ -70,10 +55,10 @@ const routes: Routes = [
       ]
     },
     {
-      path: 'pack',
-      loadChildren: './pack/pack.module#PackModule',
+      path: 'social',
+      loadChildren: './social/social.module#SocialModule',
       data: {
-        title: 'Packs'
+      title: 'Social'
       }
     },
     {
@@ -90,18 +75,19 @@ const routes: Routes = [
         title: 'Administration'
       }
     },
+  
     {
-      path: 'actualite',
-      loadChildren: './social/actualite/actualite.module#ActualiteModule',
+      path: 'message',
+      loadChildren: './message/message.module#MessageModule',
       data: {
-      title: 'Fil dactualité'
+      title: 'Messages'
       }
     },
     {
-      path: 'ami',
-      loadChildren: './social/ami/ami.module#AmiModule',
+      path: 'profil',
+      loadChildren: './profil/profil.module#ProfilModule',
       data: {
-      title: 'Amis'
+      title: 'Profil'
       }
     },
 
