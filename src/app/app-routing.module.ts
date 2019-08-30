@@ -10,14 +10,14 @@ const routes: Routes = [
   children: [
     {
       path: '',
-      component: HomeComponent
+      redirectTo: 'accueil',
+      pathMatch: 'full'
     }, 
     {
       path: 'accueil',
       component: HomeComponent
       
     },
-    
     {
         path: 'profil',
         loadChildren: './profil/profil.module#ProfilModule',
@@ -77,37 +77,12 @@ const routes: Routes = [
       }
     },
     {
-      path: 'pack',
-      loadChildren: './pack/pack.module#PackModule',
-      data: {
-        title: 'Packs'
-      }
-    }
-    ,{
       path: 'administration',
       loadChildren: './administration/administration.module#AdministrationModule',
       data: {
         title: 'Administration'
       }
     },
-    {
-      path: 'actualite',
-      loadChildren: './social/actualite/actualite.module#ActualiteModule',
-      data: {
-      title: 'Fil dactualité'
-      }
-    },
-    {
-      path: 'ami',
-      loadChildren: './social/ami/ami.module#AmiModule',
-      data: {
-      title: 'Amis'
-      }
-    },
-
-
-
-
     ]
   }, 
 
