@@ -74,7 +74,7 @@ const routes: Routes = [
       data: {
         title: 'Administration'
       }
-    },
+    }, 
   
     {
       path: 'message',
