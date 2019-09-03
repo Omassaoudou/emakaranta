@@ -90,10 +90,6 @@ const routes: Routes = [
       title: 'Profil'
       }
     },
-
-
-
-
     ]
   }, 
 
