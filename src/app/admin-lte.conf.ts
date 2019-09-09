@@ -15,7 +15,7 @@ export const adminLteConf = {
 
     // {label: 'Profil', route: 'profil', iconClasses: 'fa fa-user'},
 
-    {label: 'Mes Cours', route: 'cours', iconClasses: 'fa fa-book'},
+    {label: 'Mes Cours', route: 'cours/mescours', iconClasses: 'fa fa-book'},
 
 
     // {label: 'Messages', route: 'message', iconClasses: 'fa fa-text'},
