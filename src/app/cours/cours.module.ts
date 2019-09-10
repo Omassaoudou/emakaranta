@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { CoursRoutingModule } from './cours-routing.module';
 import { MescoursComponent } from './mescours/mescours.component';
-import { CreercoursComponent } from './creercours/creercours.component';
 import { CoursComponent } from './cours.component';
 import { OptionComponent } from './option/option.component';
 import { ParticipantComponent } from './participant/participant.component';
@@ -14,7 +13,7 @@ import { BadgeComponent } from './badge/badge.component';
 import { ModificationComponent } from './modification/modification.component';
 
 @NgModule({
-  declarations: [CoursComponent , MescoursComponent, CreercoursComponent, OptionComponent, ParticipantComponent, EvaluationComponent, ExerciceComponent, NoteComponent, BadgeComponent, ModificationComponent],
+  declarations: [CoursComponent , MescoursComponent, OptionComponent, ParticipantComponent, EvaluationComponent, ExerciceComponent, NoteComponent, BadgeComponent, ModificationComponent],
   imports: [
     CommonModule,
     CoursRoutingModule

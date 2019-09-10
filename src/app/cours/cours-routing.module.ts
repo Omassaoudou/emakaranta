@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CoursComponent } from './cours.component';
 import { MescoursComponent } from './mescours/mescours.component';
-import { CreercoursComponent } from './creercours/creercours.component';
 import { OptionComponent } from './option/option.component';
 import { BadgeComponent } from './badge/badge.component';
 import { EvaluationComponent } from './evaluation/evaluation.component';
@@ -18,10 +17,6 @@ const routes: Routes = [{
 {
   path:'mescours',
   component:MescoursComponent
-},
-{
-  path:'creercours',
-  component:CreercoursComponent
 },
 {
   path:'option',
