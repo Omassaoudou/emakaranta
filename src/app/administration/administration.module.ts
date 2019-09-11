@@ -15,6 +15,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { CreercatComponent } from './creercat/creercat.component';
 import { CreercoursComponent } from './creercours/creercours.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [AdministrationComponent, 
@@ -28,7 +29,9 @@ import { HttpClientModule } from '@angular/common/http';
     CourseComponent, 
     CoursesComponent, 
     CreercatComponent, 
-    CreercoursComponent],
+    CreercoursComponent,
+    ProfileComponent,
+  ],
   imports: [
     CommonModule,
     HttpClientModule,

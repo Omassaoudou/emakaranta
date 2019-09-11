@@ -12,6 +12,7 @@ import { CourseComponent } from './course/course.component';
 import { CoursesComponent } from './courses/courses.component';
 import { CreercatComponent } from './creercat/creercat.component';
 import { CreercoursComponent } from './creercours/creercours.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [{
   path:'',
@@ -60,6 +61,11 @@ const routes: Routes = [{
 {
   path:'creercours',
   component:CreercoursComponent
+}
+,
+{
+  path:'profil',
+  component:ProfileComponent
 }
 ];
 
