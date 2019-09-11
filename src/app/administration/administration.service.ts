@@ -12,13 +12,13 @@ export class AdministrationService {
   constructor(private http:HttpClient) { }
 
   query():Observable<any>{
-    const utilisateur = 'wstoken=c9f81d1c77bd8a585284cde023753870&wsfunction=core_user_get_users   &moodlewsrestformat=json&criteria[0][key]=&criteria[0][value]=';
+    const utilisateur = 'wstoken=c9f81d1c77bd8a585284cde023753870&wsfunction=core_user_get_users&moodlewsrestformat=json&criteria[0][key]=&criteria[0][value]=';
 
     return this.http.get(this.API_URL + utilisateur);
   }
 
   query1():Observable<any>{
-    const cours = 'wstoken=c9f81d1c77bd8a585284cde023753870&wsfunction=core_course_get_courses   &moodlewsrestformat=json';  
+    const cours = 'wstoken=c9f81d1c77bd8a585284cde023753870&wsfunction=core_course_get_courses&moodlewsrestformat=json';  
 
     return this.http.get(this.API_URL + cours); 
   }

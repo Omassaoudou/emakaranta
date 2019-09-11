@@ -1,62 +1,39 @@
-<h2>Liste des participants</h2>
-<table id="example" class="table table-striped table-bordered" style="width:100%">
-  <thead>
-      <tr>
-          <th>N°</th>
-          <th>Nom et prenom</th>
-          <th>Detail</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>01</td>
-          <td>System Architect</td>
-          <td><a routerLink="../option"><button><i class="fa  fa-sun-o"></i> </button></a></td>
-      </tr>
-      <tr>
-          <td>02</td>
-          <td>Sales Assistant</td>
-          <td>Sidney</td>
-      </tr>
-      <tr>
-          <td>03</td>
-          <td>Chief Executive Officer (CEO)</td>
-          <td>London</td>
-      </tr>
-      <tr>
-          <td>04</td>
-          <td>Developer</td>
-          <td>Edinburgh</td>
-      </tr>
-      <tr>
-          <td>05</td>
-          <td>Regional Director</td>
-          <td>Singapore</td>
-      </tr>
-      <tr>
-          <td>06</td>
-          <td>Software Engineer</td>
-          <td>San Francisco</td>
-      </tr>
-      <tr>
-          <td>07</td>
-          <td>Chief Operating Officer (COO)</td>
-          <td>San Francisco</td>
-      </tr>
-      <tr>
-          <td>08</td>
-          <td>Regional Marketing</td>
-          <td>Tokyo</td>
-      </tr>
-      <tr>
-          <td>09</td>
-          <td>Integration Specialist</td>
-          <td>Sidney</td>
-      </tr>
-      <tr>
-          <td>10</td>
-          <td>Developer</td>
-          <td>London</td>
-      </tr>
-  </tbody>
-</table>
+<br><a routerLink="/cours/option" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span></a>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  </head>
+  <div class="container">
+    <h2 class="text-center btn-primary"><b class="fa fa-list">&nbsp; liste des participants au cours</b></h2>
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <br>
+    <table class="table table-bordered table-striped">
+      <thead >
+        <tr class=" btn-primary">
+          <th>Nom d'utilisateur</th>
+          <th>Nom</th>
+          <th>Prenom</th>
+          <th>E-mail</th>
+        </tr>
+      </thead>
+      <tbody id="myTable">
+        <tr *ngFor="let participant of participants">
+          <td>{{ participant.username }}</td>
+          <td>{{ participant.firstname }}</td>
+          <td>{{participant.lastname}}</td>
+          <td>{{participant.email}}</td>
+        </tr>
+     </tbody>
+    </table>
+    
+  </div>
+  
+  <script>
+  $(document).ready(function(){
+    $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#myTable tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+  </script>
