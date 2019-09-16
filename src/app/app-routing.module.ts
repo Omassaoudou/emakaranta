@@ -90,6 +90,13 @@ const routes: Routes = [
       title: 'Profil'
       }
     },
+    {
+      path: 'profileeditor',
+      loadChildren: './profileeditor/profileeditor.module#ProfileeditorModule',
+      data: {
+      title: 'Profileeditor'
+      }
+    },
     ]
   }, 
 

@@ -1,0 +1,3 @@
+
+
+mescour: http://localhost/moodle/webservice/rest/server.php?wstoken=c9f81d1c77bd8a585284cde023753870&wsfunction=core_enrol_get_users_courses&moodlewsrestformat=json&userid=2

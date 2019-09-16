@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
 import { LoadingPageModule, MaterialBarModule } from 'angular-loading-page';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,12 +21,14 @@ import { LoadingPageModule, MaterialBarModule } from 'angular-loading-page';
     AppRoutingModule,
     CoreModule,
     LayoutModule.forRoot(adminLteConf),
-    LoadingPageModule, MaterialBarModule
+    LoadingPageModule, MaterialBarModule,
+    // other imports ...
+    ReactiveFormsModule,
   ],
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
   ],
-  bootstrap: [AppComponent]
+ bootstrap: [AppComponent]
 })
 export class AppModule {}
