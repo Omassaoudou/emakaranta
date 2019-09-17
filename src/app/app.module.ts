@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
 import { LoadingPageModule, MaterialBarModule } from 'angular-loading-page';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,7 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     LayoutModule.forRoot(adminLteConf),
     LoadingPageModule, MaterialBarModule,
     // other imports ...
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     AppComponent,

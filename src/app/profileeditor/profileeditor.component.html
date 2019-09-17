@@ -1,17 +1,83 @@
-<form [formGroup]="profileForm">
+<form [formGroup]="profileForm" class="form-horizotal" (ngSubmit)="onSubmit()">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Utilisateur</h3>
+    </div>
+    <div class="panel-body">
+      <div class="form-group">
+          <label class="col-sm-2 control-label" for="firstName">First Name:</label>
+          <div class="col-sm-10">
+              <input formControlName="firstName" type="text" class="form-control"> 
+          </div>
+      </div>
+<br>
+      <div class="form-group">
+          <label class="col-sm-2 control-label" for="lastName">Last Name:</label>
+          <div class="col-sm-10">
+              <input id="lastName" formControlName="lastName" type="text" class="form-control">
+          </div>
+      </div>
+    </div>
   
-  <label>
-    First Name:
-    <input type="text" formControlName="firstName">
-  </label>
-
-  <label>
-    Last Name:
-    <input type="text" formControlName="lastName">
-  </label>
-
-  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()"></form>
-
-  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
-
+    <div class="panel-footer">
+        <div class="btn-toolbar">
+          <button type="submit" class="btn-primary">Save</button>
+          </div>
+    </div>
+</div>
 </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+<button type="button" class="btn-primary" (clic)="onLoadDataClick()">Load Data</button>
+        
+
+<p>
+    <button (click)="updateProfile()">Update Profile</button>
+  </p>
+
+<p>
+  <button (click)="upName()">Update Name</button>
+</p>
+
+<p>
+  Form Status: {{ profileForm.status }}
+</p>
+
+<p>
+    Form Values: {{ profileForm.value }}
+</p>
+
+<p>
+    Value: {{name.value}}
+</p> -->
