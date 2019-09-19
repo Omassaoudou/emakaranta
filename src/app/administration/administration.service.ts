@@ -18,7 +18,7 @@ export class AdministrationService {
   }
 
   query1():Observable<any>{
-    const cours = 'wstoken=c9f81d1c77bd8a585284cde023753870&wsfunction=core_course_get_courses&moodlewsrestformat=json';  
+    const cours = 'wstoken=c9f81d1c77bd8a585284cde023753870&wsfunction=core_course_get_courses&moodlewsrestformat=json';   
 
     return this.http.get(this.API_URL + cours); 
   }

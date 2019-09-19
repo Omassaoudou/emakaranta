@@ -13,6 +13,8 @@ import { CoursesComponent } from './courses/courses.component';
 import { CreercatComponent } from './creercat/creercat.component';
 import { CreercoursComponent } from './creercours/creercours.component';
 import { ProfileComponent } from './profile/profile.component';
+import { OptionComponent } from './option/option.component';
+import { AdminoptioncoursComponent } from './adminoptioncours/adminoptioncours.component';
 
 const routes: Routes = [{
   path:'',
@@ -61,8 +63,15 @@ const routes: Routes = [{
 {
   path:'creercours',
   component:CreercoursComponent
-}
-,
+},
+{
+  path:'option',
+  component:OptionComponent
+},
+{
+  path:'adminoptioncours',
+  component:AdminoptioncoursComponent 
+},
 {
   path:'profil',
   component:ProfileComponent

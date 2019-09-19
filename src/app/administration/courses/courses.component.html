@@ -8,11 +8,15 @@
   <br>
   </a>
 <br>
-<head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-</head>
+<div class="form-group">
+    <a routerLink='../creercat' class="btn btn-success">Créer catégorie</a>
+</div>
+<div class="form-group">
+    <a routerLink='../creercours' class="btn btn-success">Créer cours</a>
+</div>
+
 <div class="container">
-  <h2 class="text-center btn-info"><b class="fa fa-list">&nbsp; liste des cours disponibles</b></h2>
+  <h2 class="text-center btn-info"><b class="fa fa-list">&nbsp; liste des cours disponibles</b></h2> 
   <input class="form-control" id="myInput" type="text" placeholder="Search..">
   <br>
   <table class="table table-bordered table-striped">
@@ -20,27 +24,21 @@
       <tr class=" btn-info">
         <th>Nom court</th>
         <th>Nom complet</th>
-        <th>Option</th>
+        <th>Enseignant</th>
+        <th>Modifier</th>
+        <th>Notes</th>
       </tr>
     </thead>
     <tbody id="myTable">
       <tr *ngFor="let cour of cours">
         <td>{{ cour.shortname }}</td>
         <td>{{ cour.fullname }}</td>
-        <td><a routerLink="../option" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span></a></td>
+        <td></td>
+        <td><a routerLink="../adminoptioncours" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span></a></td>
+        <td><a routerLink="../adminoptioncours" class="btn btn-info"><span class="glyphicon glyphicon-eye"></span></a></td>
       </tr>
    </tbody>
   </table>
   
 </div>
 
-<script>
-$(document).ready(function(){
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#myTable tr").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-});
-</script>

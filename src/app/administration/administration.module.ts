@@ -16,6 +16,8 @@ import { CreercatComponent } from './creercat/creercat.component';
 import { CreercoursComponent } from './creercours/creercours.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
+import { OptionComponent } from './option/option.component';
+import { AdminoptioncoursComponent } from './adminoptioncours/adminoptioncours.component';
 
 @NgModule({
   declarations: [AdministrationComponent, 
@@ -31,6 +33,8 @@ import { ProfileComponent } from './profile/profile.component';
     CreercatComponent, 
     CreercoursComponent,
     ProfileComponent,
+    OptionComponent,
+    AdminoptioncoursComponent,
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,20 @@
+.avatar{
+    margin-top: 50px;
+    vertical-align:right;
+    margin-left: 100px;
+    width:300px;
+    height: 350px;
+    border-radius: 50%;
+}
+.card{
+    vertical-align:middle;
+    border-radius: 3%;
+}
+.container{
+    background-color:white;
+    margin-left: 50px;
+}
+
+.form-control{
+    border-radius: 3%;
+}

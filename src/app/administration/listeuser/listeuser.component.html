@@ -30,8 +30,10 @@
         <th>Nom</th>
         <th>Prenom</th>
         <th>Email</th>
-        <th>Détail</th>
+        <th>Role</th>
         <th>Modifier</th>
+        
+       
 
       </tr>
     </thead>
@@ -39,9 +41,10 @@
       <tr *ngFor="let user of users">
         <td>{{ user.firstname }}</td>
         <td>{{ user.lastname   }}</td>
-        <td>{{ user.email }}</td>
-        <td><a routerLink="/administration/profile" class="btn btn-info"><span class="glyphicon glyphicon-eye-open"></span></a></td>
-        <td><a routerLink="/administration/option" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span></a></td>
+        <td style=" width: 30px;">{{ user.email }}</td>
+        <td></td>
+        <td style="width: 10px"><a routerLink="/administration/option" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span></a></td>
+        
       </tr>
     </tbody>
   </table>

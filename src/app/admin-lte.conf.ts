@@ -36,8 +36,13 @@ export const adminLteConf = {
 
     {label: 'ADMINISTRATEUR', separator: true},
 
-    {label: 'Administration du site', route: 'administration', iconClasses: 'fa fa-code'},
-    {label: 'ProfileEditor', route: 'profileeditor', iconClasses: 'fa fa-code'},
+    // {label: 'Administration du site', route: 'administration', iconClasses: 'fa fa-code'},
+    // {label: 'ProfileEditor', route: 'profileeditor', iconClasses: 'fa fa-code'},
 
+    {label: 'Administration du site', iconClasses: 'fa fa-code', children: [
+      {label: 'Utilisateurs', route: 'administration/listeuser'},
+      {label: 'Cours', route: 'administration/courses'}
+    ]},
+    {label: 'ProfileEditor', route: 'profileeditor', iconClasses: 'fa fa-code'},
   ]
 };
