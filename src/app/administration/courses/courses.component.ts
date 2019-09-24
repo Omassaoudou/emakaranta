@@ -24,6 +24,4 @@ export class CoursesComponent implements OnInit {
       console.error(err);
     });
   }
-
-
 }
