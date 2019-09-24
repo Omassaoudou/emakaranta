@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class RegisterService {
 
-  public API_URL = 'http://localhost/moodle/webservice/rest/server.php?';
+  public API_URL = 'http://localhost/moodle/webservice/rest/server.php?'; 
 
   constructor(private http:HttpClient) { }
 

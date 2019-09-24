@@ -9,6 +9,7 @@ import { ExerciceComponent } from './exercice/exercice.component';
 import { NoteComponent } from './note/note.component';
 import { ParticipantComponent } from './participant/participant.component';
 import { ModificationComponent } from './modification/modification.component';
+import { NoterComponent } from './noter/noter.component';
 
 const routes: Routes = [{
   path:'',
@@ -37,6 +38,10 @@ const routes: Routes = [{
 {
   path:'note',
   component:NoteComponent
+},
+{
+  path:'noter',
+  component:NoterComponent
 },
 {
   path:'participant',

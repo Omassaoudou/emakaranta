@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
   onSubmit(): void {
     this.loginService.login(this.profileForm.value.email, this.profileForm.value.password).subscribe(res=>{
       this.token = res.token;
+      // return;
       console.log(res);
     }, err=>{
       console.error(err);

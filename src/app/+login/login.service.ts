@@ -16,5 +16,3 @@ export class LoginService {
     return this.http.post(this.API_URL + credentials, null);
   }
 }
-
-// '?username=mom&password=Mo$123456&service=services'

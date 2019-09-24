@@ -15,6 +15,8 @@ import { CreercoursComponent } from './creercours/creercours.component';
 import { ProfileComponent } from './profile/profile.component';
 import { OptionComponent } from './option/option.component';
 import { AdminoptioncoursComponent } from './adminoptioncours/adminoptioncours.component';
+import { AdmincourseusersComponent } from './admincourseusers/admincourseusers.component';
+import { AdmingetcoursegradesComponent } from './admingetcoursegrades/admingetcoursegrades.component';
 
 const routes: Routes = [{
   path:'',
@@ -70,7 +72,15 @@ const routes: Routes = [{
 },
 {
   path:'adminoptioncours',
-  component:AdminoptioncoursComponent 
+  component:AdminoptioncoursComponent
+},
+{
+  path:'admincourseusers',
+  component:AdmincourseusersComponent
+},
+{
+  path:'admingetcoursegrades',
+  component:AdmingetcoursegradesComponent
 },
 {
   path:'profil',

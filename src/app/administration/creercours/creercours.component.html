@@ -1,91 +1,68 @@
-<br><a routerLink="/administration/course"  >
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-  <button type="button" class="btn btn-info">
-          <b class="fa fa-home">
-            Retour
-          </b>
-  </button>
-  
-  </a>
-  
-  <div class="container">
-  <div class="col-md-10">
-     
-   <!-- general form elements -->
-   <div class="box box-primary">
-     <div class="box-header with-border">
-       <h3 class="box-title" class="text-center btn-info">Ajouter cours</h3>
-     </div>
-     <!-- /.box-header -->
-     <!-- form start -->
-     <form role="form" >
-       <div class="box-body">
-         <div class="form-group">
-           <label for="exampleInputEmail1" >Nom Complet</label>
-           <input type="text" class="form-control" id="nomcomplet" placeholder="Nom complet du cours">
-         </div>
-         <div class="form-group">
-           <label for="NomAbreger"> Nom Abreger</label>
-           <input type="text" class="form-control" formControlName="Nom Abreger" id="nomabreger" placeholder="Abreviation du non">
-       
-         </div>
-         <div class="form-group">
-          <label for="categorie" >Categorie</label>
-          <input type="text" class="form-control"formControlName="Categorie" id="cat" placeholder="Enter la categorie">
+  <title>Bootstrap Example</title>
+
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <p style="text-align: center">
+        <img src="../assets/img/creercours.png" alt="Girl in a jacket"  >
+      </p>
+ <div class="container" >
+
+  <div class="row">
+	<form [formGroup]="creercoursForm" class="form-horizotal" (ngSubmit)="onSubmit()">
+
+    <div class="col-md-12">
+      <h3 class=" btn-primary text-center">Nouveau Cours</h3> <br>
+      <div class="row ">
+        <div class="form-group col-xs-6">
+            <label class="col-sm-6 control-label" for="nomcomplet">Nom complet:</label>
+            <input formControlName="nomcomplet" type="text" class="form-control">	
         </div>
-        <div class="form-group">
-            <label for="dated">Date debut</label>
-            <input type="date" class="form-control" formControlName="Date debut" id="dated" placeholder="Date debut du cours">
-        
-          </div>
-          <div class="form-group">
-           <label for="datefin" >Date Fin</label>
-           <input type="date" class="form-control" formControlName="Date fin" id="datefin" placeholder="Entrer la de fin du cours">
-         </div>
-         <div class="form-group">
-            <label for="description">Description</label>
-            <input type="text" class="form-control" formControlName="Description" id="desc" placeholder="Entrer la description du cours">
-        
-          </div>
-          <div class="form-group">
-           <label for="format" >Format du cours</label>
-           <input type="text" class="form-control" formControlName="Format du cours" id="format" placeholder="Entrer un format:pdf,word,excel...">
-         </div>
-        <div class="form-group">
-          <label for="nombresecton">Nombre de section</label>
-          <input type="number" class="form-control" formControlName="Nombre de section" id="nombresection" placeholder="Entrer le nombre de section">
-      
+        <div class="form-group col-xs-6">
+          <label class="col-sm-6 control-label" for="nomabr">Nom abregé:</label>
+          <input formControlName="nomabr" type="text" class="form-control">
         </div>
-         <div class="form-group">
-           <label for="nom">Nom</label>
-           <input type="text" class="form-control"formControlName="Nom" id="nom" placeholder="Nom">
-           
-         </div>
-         <div class="form-group">
-           <label for="taillemax">Taille max</label>
-           <input type="number" class="form-control" formControlName="Taille max" id="taillemax" placeholder="enrer une taille">
-           <br />
-         </div>
-         <div class="form-group" enctype="multipart/form-data">
-           <label for="mon_fichier">Fichier (format pdf uniquement | max. 5 Mo) :</label>
-           <input type="hidden" name="MAX_FILE_SIZE" value="5242880" />
-           <input type="file" name="mon_fichier" id="mon_fichier" accept=".pdf"/>
-         </div>
-         
+        <div class="form-group col-xs-6">
+            <label class="col-sm-6 control-label" for="Categorie">Categorie:</label>
+            <select formControlName="categorie" class="form-control">
+              <option value="1">1ere</option>
+              <option value="2">2nd</option>
+              <option value="3">3eme</option>
+            </select>
+            <!-- <input formControlName="categorie" type="number" class="form-control" value="1"> -->
+        </div>
+        <div class="form-group col-md-6">
+            <label class="col-sm-6 control-label" for="description">Description:</label>
+            <input formControlName="description" type="text" class="form-control">
+        </div>
+        <!-- <div class="form-group col-xs-6">
+            <label class="col-sm-6 control-label" for="datedeb">Date debut:</label>
+            <input id="lastName" formControlName="datedeb" type="date" class="form-control" disabled>	
+        </div>
+        <div class="form-group col-md-6">
+            <label class="col-sm-6 control-label" for="datefin">Date fin:</label> 
+            <input formControlName="datefin" type="date" class="form-control" disabled>
+        </div>	 -->
+      </div>
+      <br>
+      <div id="div1">
+      <button type="submit" class="btn btn-primary">valider</button>
        </div>
-       <!-- /.box-body -->
+    </div>
   
-       <div class="box-footer">
-         <button type="submit" class="btn btn-primary">Submit</button>
-       </div>
-     </form>
-   </div>
-  </div>   
-  
-  
-   <!-- /.box -->
-       
-  
-  
-   
-  
+    </form>
+  </div>
+
+
+</div>
+
+
+
+</body>
+</html>

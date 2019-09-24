@@ -1,41 +1,50 @@
-<br><a routerLink="../course"  >
 
-  <button type="button" class="btn btn-info">
-          <b class="fa fa-home">
-            Retour
-          </b>
-  </button>
-  <br>
-  </a>
-<br>
-<div class="form-group">
-    <a routerLink='../creercat' class="btn btn-success">Créer catégorie</a>
-</div>
-<div class="form-group">
-    <a routerLink='../creercours' class="btn btn-success">Créer cours</a>
-</div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active" style="margin-right:10px">
+                  <a class="btn btn-info glyphicon glyphicon-arrow-left" href="#"></a>
+            </li>
+            <li class="nav-item active" style="margin-right:10px">
+                <a class="btn btn-info glyphicon glyphicon-home" href="#"></a>
+            </li>
+            <li class="nav-item active" style="margin-right:10px">
+              <a class="btn btn-info" routerLink='/administration/creercat'>Créer catégorie</a>
+            </li>
+            <li class="nav-item active" style="margin-right:10px">
+                <a class="btn btn-info" routerLink='/administration/creercours'>Créer Cours</a>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
 
-<div class="container">
-  <h2 class="text-center btn-info"><b class="fa fa-list">&nbsp; liste des cours disponibles</b></h2> 
-  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+<div class="container-fluid">
+  <h2 class="text-center btn-info"><b class="fa fa-list">&nbsp; liste des cours disponibles</b></h2>
+  
   <br>
   <table class="table table-bordered table-striped">
     <thead >
       <tr class=" btn-info">
         <th>Nom court</th>
         <th>Nom complet</th>
+        <th>Catégorie</th>
         <th>Enseignant</th>
         <th>Modifier</th>
+        <th>Participants</th>
         <th>Notes</th>
       </tr>
     </thead>
-    <tbody id="myTable">
+    <tbody id="myTable"> 
       <tr *ngFor="let cour of cours">
         <td>{{ cour.shortname }}</td>
         <td>{{ cour.fullname }}</td>
+        <td>{{ cour.categoryid }}</td>
         <td></td>
-        <td><a routerLink="../adminoptioncours" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span></a></td>
-        <td><a routerLink="../adminoptioncours" class="btn btn-info"><span class="glyphicon glyphicon-eye"></span></a></td>
+        <td><a routerLink="/administration/adminoptioncours" class="btn btn-success align-center"><span class="glyphicon glyphicon-edit"></span></a></td>
+        <td><a routerLink="/administration/adminadduser" class="btn btn-info"><span class="glyphicon glyphicon-plus"></span></a>
+          <a routerLink="/administration/admincourseusers, {{cour.id}}" class="btn btn-warning"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+        <td><a routerLink="/administration/admingetcoursegrades" class="btn btn-warning"><span class="glyphicon glyphicon-eye-open"></span></a></td>
       </tr>
    </tbody>
   </table>

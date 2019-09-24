@@ -6,7 +6,7 @@ import { PackComponent } from './pack.component';
 import { PacklComponent } from './packl/packl.component';
 
 @NgModule({
-  declarations: [PackComponent, PacklComponent,],
+  declarations: [PackComponent, PackComponent, PacklComponent,],
   imports: [
     CommonModule,
     PackRoutingModule

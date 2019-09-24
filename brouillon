@@ -1,3 +1,18 @@
 
 
 mescour: http://localhost/moodle/webservice/rest/server.php?wstoken=c9f81d1c77bd8a585284cde023753870&wsfunction=core_enrol_get_users_courses&moodlewsrestformat=json&userid=2
+
+
+core_enrol_get_enrolled_users: l'ensemble des utilisateurs d'un cours et aussi l'ensemble des cours d'un utilisateurs
+    http://localhost/moodle/webservice/rest/server.php?wstoken=c9f81d1c77bd8a585284cde023753870&wsfunction=core_enrol_get_enrolled_users &moodlewsrestformat=json&courseid=2
+
+
+core_course_get_contents:
+    http://localhost/moodle/webservice/rest/server.php?wstoken=c9f81d1c77bd8a585284cde023753870&wsfunction=core_course_get_contents &moodlewsrestformat=json&courseid=3
+
+Attribuer_role_a_un_utilisateur
+    http://localhost/moodle/webservice/rest/server.php?wstoken=c9f81d1c77bd8a585284cde023753870&wsfunction=enrol_manual_enrol_users &moodlewsrestformat=json&enrolments[0][roleid]=5&enrolments[0][userid]=5&enrolments[0][courseid]=5
+
+
+
+

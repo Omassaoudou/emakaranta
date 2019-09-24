@@ -18,6 +18,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
 import { OptionComponent } from './option/option.component';
 import { AdminoptioncoursComponent } from './adminoptioncours/adminoptioncours.component';
+import { AdmincourseusersComponent } from './admincourseusers/admincourseusers.component';
+import { AdmingetcoursegradesComponent } from './admingetcoursegrades/admingetcoursegrades.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AdministrationComponent, 
@@ -35,11 +38,16 @@ import { AdminoptioncoursComponent } from './adminoptioncours/adminoptioncours.c
     ProfileComponent,
     OptionComponent,
     AdminoptioncoursComponent,
+    AdmincourseusersComponent,
+    AdmingetcoursegradesComponent,
+    
   ],
   imports: [
     CommonModule,
     HttpClientModule,
-    AdministrationRoutingModule
+    AdministrationRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AdministrationComponent]
