@@ -22,6 +22,13 @@ export class CoursService {
  
     return this.http.get(this.API_URL + mescours);   
   }
+
+  
+  lirecours():Observable<any>{
+    const utilisateur = 'wstoken=c9f81d1c77bd8a585284cde023753870&wsfunction=core_course_get_contents &moodlewsrestformat=json';
+    const tok ='&courseid=2'
+    return this.http.get(this.API_URL + utilisateur);
+  }
   
   participants():Observable<any>{
     const participants = 'wstoken=c9f81d1c77bd8a585284cde023753870&wsfunction=core_enrol_get_enrolled_users%20&moodlewsrestformat=json&courseid=2';  

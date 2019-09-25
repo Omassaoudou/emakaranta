@@ -11,7 +11,6 @@ export class AdmincourseusersComponent implements OnInit {
   users: any;
 
   constructor(private service: AdministrationService) { } 
-
   ngOnInit() {
     this.getData();
   }

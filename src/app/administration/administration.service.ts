@@ -24,7 +24,7 @@ export class AdministrationService {
     return this.http.get(this.API_URL + utilisateur + id);
   }
 
-  query1():Observable<any>{
+  courses():Observable<any>{
     const cours = 'wstoken=c9f81d1c77bd8a585284cde023753870&wsfunction=core_course_get_courses &moodlewsrestformat=json';   
 
     return this.http.get(this.API_URL + cours); 

@@ -10,6 +10,8 @@ export class AccueilComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log('token: ' +localStorage.getItem('token') ); 
+    
   }
 
 }

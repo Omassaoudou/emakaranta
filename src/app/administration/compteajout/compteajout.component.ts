@@ -21,7 +21,7 @@ export class CompteajoutComponent implements OnInit {
       prenom: new FormControl(''),
       email: new FormControl(''),
       pays: new FormControl(''),
-      ville: new FormControl('') 
+      ville: new FormControl('')
     });
   }
 

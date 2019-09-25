@@ -10,6 +10,7 @@ import { NoteComponent } from './note/note.component';
 import { ParticipantComponent } from './participant/participant.component';
 import { ModificationComponent } from './modification/modification.component';
 import { NoterComponent } from './noter/noter.component';
+import { LirecoursComponent } from './lirecours/lirecours.component';
 
 const routes: Routes = [{
   path:'',
@@ -50,6 +51,10 @@ const routes: Routes = [{
 {
   path:'modification',
   component:ModificationComponent
+},
+{
+  path:'lirecours',
+  component: LirecoursComponent
 }];
 
 @NgModule({

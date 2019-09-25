@@ -17,7 +17,7 @@ export class CoursesComponent implements OnInit {
   }
 
   getData(){
-    this.service.query1().subscribe(res=>{
+    this.service.courses().subscribe(res=>{
       this.cours = res; 
       console.log(res);
     }, err=>{

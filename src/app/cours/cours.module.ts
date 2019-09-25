@@ -12,9 +12,10 @@ import { NoteComponent } from './note/note.component';
 import { BadgeComponent } from './badge/badge.component';
 import { ModificationComponent } from './modification/modification.component';
 import { NoterComponent } from './noter/noter.component';
+import { LirecoursComponent } from './lirecours/lirecours.component';
 
 @NgModule({
-  declarations: [CoursComponent , MescoursComponent, OptionComponent, ParticipantComponent, EvaluationComponent, ExerciceComponent, NoteComponent, BadgeComponent, ModificationComponent, NoterComponent],
+  declarations: [CoursComponent , MescoursComponent, OptionComponent, ParticipantComponent, EvaluationComponent, ExerciceComponent, NoteComponent, BadgeComponent, ModificationComponent, NoterComponent, LirecoursComponent],
   imports: [
     CommonModule,
     CoursRoutingModule

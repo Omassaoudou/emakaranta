@@ -22,15 +22,15 @@
 <div class="container">
 <h2 class="text-center btn-info"><b class="fa fa-list">&nbsp; Mes cours</b></h2>
 
-<br>
 <table class="table table-bordered table-striped">
   <thead >
     <tr class=" btn-info">
       <th>Nom court</th>
       <th>Nom complet</th>
       <th>Catégorie</th>  
-      <th>participants</th> 
-      <th>Notes</th>
+      <th>participants</th>
+      <th>Lire</th> 
+      <th>Mes notes</th>
     </tr>
   </thead>
   <tbody id="myTable">
@@ -38,8 +38,9 @@
       <td>{{ mescour.shortname }}</td>
       <td>{{ mescour.fullname }}</td>
       <td>{{mescour.category}}</td>
-      <td style="width:7%"><a routerLink="../participant" class="btn btn-success align-center"><span class="glyphicon glyphicon-user"></span></a></td>
-      <td style="width:8%"><a routerLink="#" class="btn btn-warning" style="margin-right:0.5px"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+      <td ><a routerLink="/cours/participant" class="btn btn-success align-center"><span class="glyphicon glyphicon-user"></span></a></td>
+      <td ><a routerLink="/cours/lirecours" class="btn btn-primary" ><span class="glyphicon glyphicon-book"></span></a></td>
+      <td ><a routerLink="#" class="btn btn-warning" ><span class="glyphicon glyphicon-eye-open"></span></a></td>
      </tr>
  </tbody>
 </table>

@@ -1,5 +1,5 @@
 <div class="hold-transition login-page">
-  <div class="login-box">
+  <div class="login-box" style="border-radius: 5%"m>
     <div class="login-logo">
       <a routerLink="/"><b>E-</b>Makaranta</a> 
     </div>
@@ -15,13 +15,14 @@
           <input type="password" class="form-control" placeholder="Password" formControlName="password">  
           <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         </div>
+        <br>
         <div class="row">
           <div class="col-xs-8">
-            <div class="checkbox icheck">
-              <label>
-                <div class="icheckbox_square-blue" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0; padding: 0; background: rgb(255, 255, 255); border: 0; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0; padding: 0; background: rgb(255, 255, 255); border: 0; opacity: 0;"></ins></div> Souvenir de moi
-              </label>
-            </div>
+            <!-- Default checked -->
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="defaultChecked2" checked>
+          <label class="custom-control-label" for="defaultChecked2">Se souvenir de moi</label>
+        </div>
           </div>
           <!-- /.col -->
           <div class="col-xs-4">
@@ -30,15 +31,19 @@
           <!-- /.col -->
         </div>
       </form>
-
-     
       <!-- /.social-auth-links -->
 
-      <a href="#">Mot de passe oublié</a><br>
+      <a href="#">Mot de passe oublié</a><br> <br>
       <a routerLink="/register" class="text-center">S'inscrire</a>
 
     </div>
     <!-- /.login-box-body -->
    
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="#"> Emakaranta.com</a>
+          </div>
+          <!-- Copyright -->
+  
   </div>
 </div>
