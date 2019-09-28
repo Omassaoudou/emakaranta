@@ -2,45 +2,38 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item active" style="margin-right:10px">
-                  <a class="btn btn-info glyphicon glyphicon-arrow-left" href="#"></a>
+           <li class="nav-item active" style="margin-right:10px">
+                <a class="btn btn-info glyphicon glyphicon-arrow-left" href="/cours/mescours"></a>
             </li>
             <li class="nav-item active" style="margin-right:10px">
-                <a class="btn btn-info glyphicon glyphicon-home" href="#"></a>
+              <a class="btn btn-info" routerLink='/cours/evaluation'>Evaluation</a>
             </li>
             <li class="nav-item active" style="margin-right:10px">
-              <a class="btn btn-info" routerLink='../evaluation'>Evaluation</a>
-            </li>
-            <li class="nav-item active" style="margin-right:10px">
-              <a class="btn btn-info" routerLink='#'>Exercice</a>
+              <a class="btn btn-info" routerLink='/cours/exercice'>Exercice</a>
           </li>
           </ul>
         </div>
       </nav>
-  
   <div class="container">
-  <h2 class="text-center btn-info"><b class="fa fa-list">&nbsp; Sexions cours</b></h2>
+    <h2 class="text-center btn-primary" *ngFor="let cour of cours"><b class="fa fa-list">&nbsp; Sexions cours: {{ cour.fullname}}</b></h2>
   
   <br>
   <table class="table table-bordered table-striped">
     <thead >
-      <tr class=" btn-info">
-        <th>Sexion</th>
-        <th>Libelle sexion</th>
+      <tr class="btn-primary">
+        <th>Section</th>
+        <th>Titre</th>
+        <th>Lire</th>
       </tr>
     </thead>
     <tbody id="myTable">
-      <tr *ngFor="let mescour of mescours">
-        <td>{{ mescour.shortname }}</td>
-        <td>{{ mescour.fullname }}</td>
-        <td>{{mescour.category}}</td>
-        <td><a routerLink="/cours/participant" class="btn btn-success align-center"><span class="glyphicon glyphicon-user"></span></a></td>
-        <td><a routerLink="/cours/lirecours" class="btn btn-primary" ><span class="glyphicon glyphicon-book"></span></a></td>
-        <td><a routerLink="#" class="btn btn-warning" ><span class="glyphicon glyphicon-eye-open"></span></a></td>
+      <tr *ngFor="let lirecour of lirecours"> 
+        <td>{{ lirecour.name}}</td>
+        <td>{{ lirecour.modules[0].name}}</td> 
+        <td><a href="{{lirecour.modules[0].url}}" class="btn btn-warning" ><span class="glyphicon glyphicon-eye-open"></span></a></td>
        </tr>
    </tbody>
   </table>
-  
   </div>
   
   

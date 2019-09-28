@@ -11,11 +11,9 @@ export class TokenGuardGuard implements CanActivate {
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean | UrlTree {
       const token = localStorage.getItem('token');      
-      if(token === null || token === undefined || token === ''){
-        console.log('calling my guard ......' + token);
+      if(token == null || token == undefined || token == ''){
         return this.router.parseUrl('/login');
       } else {
-        console.log('calling my guard ......No');
         return true;
       }
   }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CoursService } from '../cours.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mescours',
@@ -10,7 +11,7 @@ export class MescoursComponent implements OnInit {
 
   mescours: any;
 
-  constructor(private service: CoursService) { }
+  constructor(private service: CoursService, private router: Router) { }
 
   ngOnInit() {
     this.getData();
@@ -23,6 +24,10 @@ export class MescoursComponent implements OnInit {
     }, err=>{
       console.error(err);
     });
+  }
+
+  onClick(lirecours){
+    this.router.navigate(['/cours/lirecours', lirecours]);
   }
 
 }

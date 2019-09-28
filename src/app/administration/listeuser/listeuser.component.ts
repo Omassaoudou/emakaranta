@@ -22,7 +22,7 @@ export class ListeuserComponent implements OnInit {
         console.log(res);
       }, err=>{
         console.error(err);
-      });
+      }); 
     }
 
 }

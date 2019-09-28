@@ -43,6 +43,5 @@ export const adminLteConf = {
       {label: 'Utilisateurs', route: 'administration/listeuser'},
       {label: 'Cours', route: 'administration/courses'}
     ]},
-    {label: 'ProfileEditor', route: 'profileeditor', iconClasses: 'fa fa-code'},
   ]
 };

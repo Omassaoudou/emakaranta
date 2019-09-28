@@ -6,13 +6,13 @@
     <!-- /.login-logo -->
     <div class="login-box-body">
       <p class="login-box-msg">Page de connexion</p>
-      <form [formGroup]="profileForm" class="form-horizotal" (ngSubmit)="onSubmit()">
+      <form [formGroup]="profileForm" class="form-horizotal" (ngSubmit)="onSubmit(f)" #f='ngForm'>
         <div class="form-group has-feedback">
-          <input type="email" class="form-control" placeholder="Email" formControlName="email">
+          <input type="email" class="form-control" placeholder="Nom d'utilisateur" formControlName="email" ngModel required> 
           <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
         </div>
         <div class="form-group has-feedback">
-          <input type="password" class="form-control" placeholder="Password" formControlName="password">  
+          <input type="password" class="form-control" placeholder="Mot de passe" formControlName="password" ngModel required>  
           <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         </div>
         <br>
@@ -26,14 +26,14 @@
           </div>
           <!-- /.col -->
           <div class="col-xs-4">
-            <button type="submit" class="btn btn-primary btn-block btn-flat">Connexion</button>
+            <button type="submit" class="btn btn-primary btn-block btn-flat" [disabled]="f.invalid">Connexion</button>
           </div>
           <!-- /.col -->
         </div>
       </form>
       <!-- /.social-auth-links -->
 
-      <a href="#">Mot de passe oublié</a><br> <br>
+      <a href="/#/login">Mot de passe oublié</a><br> <br>
       <a routerLink="/register" class="text-center">S'inscrire</a>
 
     </div>
@@ -41,7 +41,7 @@
    
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3">© 2019 Copyright:
-            <a href="#"> Emakaranta.com</a>
+            <a href="/#/login"> Emakaranta.com</a>
           </div>
           <!-- Copyright -->
   

@@ -75,7 +75,7 @@ const routes: Routes = [{
   component:AdminoptioncoursComponent
 },
 {
-  path:'admincourseusers',
+  path:'admincourseusers/:id',
   component:AdmincourseusersComponent
 },
 {

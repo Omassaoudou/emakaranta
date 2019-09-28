@@ -17,8 +17,7 @@ const routes: Routes = [
     }, 
     {
       path: 'accueil',
-      component: HomeComponent ,
-      canActivate:[TokenGuardGuard],     
+      component: HomeComponent    
     },
     
     {

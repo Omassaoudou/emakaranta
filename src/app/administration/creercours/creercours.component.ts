@@ -30,8 +30,8 @@ export class CreercoursComponent implements OnInit {
       this.tok = res;
       console.log(res);
     }, err=>{
-      console.error(err);
+      console.error(err); 
     });
-  }
+  } 
 
 }

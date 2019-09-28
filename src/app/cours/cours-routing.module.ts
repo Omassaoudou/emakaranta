@@ -53,7 +53,7 @@ const routes: Routes = [{
   component:ModificationComponent
 },
 {
-  path:'lirecours',
+  path:'lirecours/:id',
   component: LirecoursComponent
 }];
 

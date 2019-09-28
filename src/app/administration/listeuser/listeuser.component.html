@@ -33,6 +33,7 @@
         <th>Nom</th>
         <th>Prenom</th>
         <th>Email</th>
+        <th>Dernier acces</th>
         <th>Modifier</th>
         
        
@@ -44,6 +45,7 @@
         <td>{{ user.firstname }}</td>
         <td>{{ user.lastname   }}</td>
         <td>{{ user.email }}</td>
+        <td>{{ user.lastaccess}}</td>
         <td ><a routerLink="/administration/option" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span></a></td>
         
       </tr>

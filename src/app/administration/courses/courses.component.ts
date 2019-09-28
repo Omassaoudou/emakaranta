@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AdministrationService } from '../administration.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-courses',
@@ -10,7 +11,7 @@ export class CoursesComponent implements OnInit {
 
   cours: any;
 
-  constructor(private service: AdministrationService) { }
+  constructor(private service: AdministrationService, private router: Router) { }
 
   ngOnInit() {
     this.getData();
@@ -23,5 +24,9 @@ export class CoursesComponent implements OnInit {
     }, err=>{
       console.error(err);
     });
+  }
+
+  onClick(idCour){
+    this.router.navigate(['/administration/admincourseusers', idCour]);
   }
 }

@@ -23,7 +23,7 @@ export class CompteajoutComponent implements OnInit {
       pays: new FormControl(''),
       ville: new FormControl('')
     });
-  }
+  } 
 
   onSubmit(): void {
     this.administrationService.compteajout(this.profileForm.value.username, this.profileForm.value.password, this.profileForm.value.nom, this.profileForm.value.prenom, this.profileForm.value.email, this.profileForm.value.pays, this.profileForm.value.ville).subscribe(res=>{

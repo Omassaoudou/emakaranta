@@ -38,15 +38,15 @@
     <tbody id="myTable"> 
       <tr *ngFor="let cour of cours">
         <td>{{ cour.shortname }}</td>
-        <td>{{ cour.fullname }}</td>
+        <td>{{ cour.fullname }}</td> 
         <td>{{ cour.categoryid }}</td>
         <td></td>
         <td><a routerLink="/administration/adminoptioncours" class="btn btn-success align-center"><span class="glyphicon glyphicon-edit"></span></a></td>
         <td><a routerLink="/administration/adminadduser" class="btn btn-info"><span class="glyphicon glyphicon-plus"></span></a>
-          <a routerLink="/administration/admincourseusers, {{cour.id}}" class="btn btn-warning"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+          <a (click)="onClick(cour.id)" class="btn btn-warning"><span class="glyphicon glyphicon-eye-open"></span></a></td>
         <td><a routerLink="/administration/admingetcoursegrades" class="btn btn-warning"><span class="glyphicon glyphicon-eye-open"></span></a></td>
       </tr>
-   </tbody>
+   </tbody> 
   </table>
   
 </div>

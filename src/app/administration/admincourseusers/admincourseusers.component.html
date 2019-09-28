@@ -21,12 +21,14 @@
             <tr class=" btn-info" >
               <th>Nom</th>
               <th>Prenom</th>
+              <th>Role</th>
             </tr>
           </thead>
           <tbody id="myTable">
             <tr *ngFor="let user of users">
-              <td>{{ user.firstname }}</td>
-              <td>{{ user.lastname   }}</td>              
+              <td>{{ user.firstname}}</td>
+              <td>{{ user.lastname}}</td>
+              <td>{{ user.roles[0].shortname}}</td>              
             </tr>
           </tbody>
           </table>
