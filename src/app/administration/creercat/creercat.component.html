@@ -1,10 +1,16 @@
-<br><a routerLink="../course"  >
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active" id="a1" style="margin-right:10px">
+            <a class="btn btn-primary glyphicon glyphicon-arrow-left" routerLink="/administration/courses"></a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+<br>
+<a routerLink="../course"  >
 
-  <button type="button" class="btn btn-info">
-          <b class="fa fa-home">
-            Retour
-          </b>
-  </button>
   
   </a>
   
@@ -24,24 +30,7 @@
            <label for="exampleInputEmail1" >Nom Complet</label>
            <input type="text" class="form-control" id="nomcomplet" placeholder="Nom complet du cours">
          </div>
-         <div class="form-group">
-           <label for="NomAbreger"> Nom Abreger</label>
-           <input type="text" class="form-control" id="nomabreger" placeholder="Abreviation du non">
-       
-         </div>
-         <div class="form-group">
-          <label for="categorie" >Categorie</label>
-          <input type="text" class="form-control" id="cat" placeholder="Enter la categorie">
-        </div>
-        <div class="form-group">
-            <label for="dated">Date debut</label>
-            <input type="date" class="form-control" id="dated" placeholder="Date debut du cours">
-        
-          </div>
-
        </div>
-       <!-- /.box-body -->
-  
        <div class="box-footer">
          <button type="submit" class="btn btn-primary">Submit</button>
        </div>

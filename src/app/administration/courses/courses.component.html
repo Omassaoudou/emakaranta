@@ -2,17 +2,14 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item active" style="margin-right:10px">
-                  <a class="btn btn-info glyphicon glyphicon-arrow-left" href="#"></a>
+            <li class="nav-item active"id="a1" style="margin-right:10px">
+                <a class="btn btn-primary glyphicon glyphicon-home" href="#"></a>
             </li>
-            <li class="nav-item active" style="margin-right:10px">
-                <a class="btn btn-info glyphicon glyphicon-home" href="#"></a>
+            <li class="nav-item active"id="a1" style="margin-right:10px">
+              <a class="btn btn-primary" routerLink='/administration/creercat'>Créer catégorie</a>
             </li>
-            <li class="nav-item active" style="margin-right:10px">
-              <a class="btn btn-info" routerLink='/administration/creercat'>Créer catégorie</a>
-            </li>
-            <li class="nav-item active" style="margin-right:10px">
-                <a class="btn btn-info" routerLink='/administration/creercours'>Créer Cours</a>
+            <li class="nav-item active"id="a1" style="margin-right:10px">
+                <a class="btn btn-primary" routerLink='/administration/creercours'>Créer Cours</a>
             </li>
             
           </ul>
@@ -20,31 +17,32 @@
       </nav>
 
 <div class="container-fluid">
-  <h2 class="text-center btn-info"><b class="fa fa-list">&nbsp; liste des cours disponibles</b></h2>
+  <h2 class="text-center btn-primary"><b class="fa fa-list">&nbsp; liste des cours disponibles</b></h2>
   
   <br>
   <table class="table table-bordered table-striped">
     <thead >
-      <tr class=" btn-info">
+      <tr class=" btn-primary">
+        <th>Id</th>
         <th>Nom court</th>
         <th>Nom complet</th>
         <th>Catégorie</th>
         <th>Enseignant</th>
-        <th>Modifier</th>
-        <th>Participants</th>
-        <th>Notes</th>
+        <th class="text-center">Modifier</th>
+        <th class="text-center">Participants</th>
+        <th class="text-center">Supprimer</th>
       </tr>
     </thead>
     <tbody id="myTable"> 
       <tr *ngFor="let cour of cours">
+          <td>{{ cour.id }}</td>
         <td>{{ cour.shortname }}</td>
         <td>{{ cour.fullname }}</td> 
         <td>{{ cour.categoryid }}</td>
         <td></td>
-        <td><a routerLink="/administration/adminoptioncours" class="btn btn-success align-center"><span class="glyphicon glyphicon-edit"></span></a></td>
-        <td><a routerLink="/administration/adminadduser" class="btn btn-info"><span class="glyphicon glyphicon-plus"></span></a>
-          <a (click)="onClick(cour.id)" class="btn btn-warning"><span class="glyphicon glyphicon-eye-open"></span></a></td>
-        <td><a routerLink="/administration/admingetcoursegrades" class="btn btn-warning"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+        <td class="text-center"><a routerLink="/administration/adminoptioncours" class="btn btn-primary align-center"><span class="glyphicon glyphicon-edit"></span></a></td>
+        <td class="text-center"><a (click)="onClick(cour.id)" class="btn btn-warning"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+        <td class="text-center"><a (click)="onClickS(cour.id)" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a></td>
       </tr>
    </tbody> 
   </table>

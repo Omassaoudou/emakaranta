@@ -1,21 +1,15 @@
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-           <li class="nav-item active" style="margin-right:10px">
-                <a class="btn btn-info glyphicon glyphicon-arrow-left" href="/cours/mescours"></a>
-            </li>
-            <li class="nav-item active" style="margin-right:10px">
-              <a class="btn btn-info" routerLink='/cours/evaluation'>Evaluation</a>
-            </li>
-            <li class="nav-item active" style="margin-right:10px">
-              <a class="btn btn-info" routerLink='/cours/exercice'>Exercice</a>
-          </li>
-          </ul>
-        </div>
-      </nav>
-  <div class="container">
-    <h2 class="text-center btn-primary" *ngFor="let cour of cours"><b class="fa fa-list">&nbsp; Sexions cours: {{ cour.fullname}}</b></h2>
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active" id="a1" style="margin-right:10px">
+              <a class="btn btn-primary glyphicon glyphicon-arrow-left" routerLink="/cours/mescours"></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <h2 class="text-center btn-primary" *ngFor="let cour of cours"><b class="fa fa-list">&nbsp; Sections cours: {{ cour.fullname}}</b></h2>
   
   <br>
   <table class="table table-bordered table-striped">
@@ -23,15 +17,17 @@
       <tr class="btn-primary">
         <th>Section</th>
         <th>Titre</th>
-        <th>Lire</th>
+        <th class="text-center">Lire</th>
+        <th class="text-center">Evaluer</th>
       </tr>
     </thead>
     <tbody id="myTable">
       <tr *ngFor="let lirecour of lirecours"> 
         <td>{{ lirecour.name}}</td>
         <td>{{ lirecour.modules[0].name}}</td> 
-        <td><a href="{{lirecour.modules[0].url}}" class="btn btn-warning" ><span class="glyphicon glyphicon-eye-open"></span></a></td>
-       </tr>
+        <td class="text-center"><a href="{{lirecour.modules[0].url}}" class="btn btn-warning" ><span class="glyphicon glyphicon-eye-open"></span></a></td>
+        <td class="text-center"><a  class="btn btn-primary" ><span class="glyphicon glyphicon-eye-open"></span></a></td>
+      </tr>
    </tbody>
   </table>
   </div>

@@ -1,3 +1,18 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active" id="a1" style="margin-right:10px">
+            <a class="btn btn-primary glyphicon glyphicon-arrow-left" routerLink="/administration/listeuser"></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<h2 class="text-center btn-primary"><b class="fa fa-list">&nbsp; Modification</b></h2>
+
 <div class="container-fluid " style="background-color: white">
     <div class="col-sm-6">
       <div class="card" style="background-color:white">
@@ -5,18 +20,20 @@
         <div class="form-group">
          <img src="../../../assets/avatar.png" alt="Avatar" class="avatar">
         </div>
-        <h3>ses cours :</h3>
+        <h3 >Cours suivis :</h3>
            <table class="table table-bordered table-striped">
               <thead >
-                <tr class=" btn-info">
+                <tr class=" btn-primary" >
                   <th>Nom cours</th>
                   <th>Catégorie</th>
+                  <th class="text-center">Retirer</th>
                 </tr>
               </thead>
               <tbody id="myTable">
-                <tr >
-                  <td></td>
-                  <td></td>  
+                <tr *ngFor="let mescour of mescours">
+                  <td>{{mescour.fullname}}</td>
+                  <td>{{mescour.category}}</td>  
+                  <td class="text-center"><a (click)="onClickSup(mescour.id, userId)" class="btn btn-danger align-center"><span class="glyphicon glyphicon-minus"></span></a></td>
                 </tr>
              </tbody>
             </table>
@@ -26,44 +43,62 @@
     <div class="col-sm-6">
       <div class="card">
         <div class="card-body">
-            <form role="form" >
-                <div class="box-body">
+          <fieldset class="btn-default">
+            <form [formGroup]="profileForm" class="form-horizotal" (ngSubmit)="onSubmit(userId)">
+                <div class="box-body"> 
+                    <div class="form-group">
+                        <label for="dated">Nom d'utilisateur :</label>
+                        <input type="text" class="form-control"  id="dated" value="{{profil.users[0].username}}" formControlName="username">                 
+                    </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1" >Nom :</label>
-                    <input type="text" class="form-control" id="nomcomplet" >
+                    <label for="" >Nom :</label>
+                    <input type="text" class="form-control" id="nomcomplet" value="{{profil.users[0].lastname}}" formControlName="nom">
                   </div>
                   <div class="form-group">
                     <label for="NomAbreger"> Prénom :</label>
-                    <input type="text" class="form-control" formControlName="Nom Abreger" id="nomabreger" >               
+                    <input type="text" class="form-control" value="{{profil.users[0].firstname}}" id="nomabreger" formControlName="prenom">               
                   </div>
                   <div class="form-group">
-                      <label for="dated">Nom d'utilisateur :</label>
-                      <input type="text" class="form-control" formControlName="Date debut" id="dated" >                 
-                  </div>
-                  <div class="form-group">
-                      <label for="dated">adresse mail :</label>
-                      <input type="text" class="form-control" formControlName="Date debut" id="dated" >                 
-                  </div>
-                  <div class="form-group">
-                   <label for="categorie" >Date de naissance :</label>
-                   <input type="text" class="form-control"formControlName="Categorie" id="cat" >
-                 </div>
-                 <div class="form-group">
-                     <label for="dated">Lieu de naissance :</label>
-                     <input type="text" class="form-control" formControlName="Date debut" id="dated" >                 
-                 </div>
-                  <div class="form-group">
-                    <label for="datefin" >Classe :</label>
-                    <input type="text" class="form-control" formControlName="Date fin" id="datefin" >
-                  </div>                 
+                      <label for="dated">Email :</label>
+                      <input type="text" class="form-control"  id="dated" value="{{profil.users[0].email}}" formControlName="email">                 
+                  </div>              
                 </div>
                 <!-- /.box-body -->
            
                 <div class="box-footer">
-                  <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                  <br>
+                  <p class="text-center"><button type="submit" class="btn btn-primary">Modifier</button> </p>
                 </div>
-              </form>          
+              </form> 
+              </fieldset>         
         </div>
       </div>
     </div>
+  </div>
+
+
+
+<div class="container-fluid">
+    <h2 class="text-center btn-primary"><b class="fa fa-list">&nbsp; Liste des cours disponibles</b></h2>
+    
+    <br>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr class=" btn-primary">
+          <th>Nom court</th>
+          <th>Nom complet</th>
+          <th>Catégorie</th>
+          <th class="text-center">Affecter</th>
+        </tr>
+      </thead>
+      <tbody id="myTable"> 
+        <tr *ngFor="let cour of cours">
+          <td>{{ cour.shortname }}</td>
+          <td>{{ cour.fullname }}</td> 
+          <td>{{ cour.categoryid}}</td>
+          <td class="text-center"><a (click)="onClick(cour.id, userId)" class="btn btn-primary align-center"><span class="glyphicon glyphicon-plus"></span></a></td>
+        </tr>
+     </tbody> 
+    </table>
+    
   </div>

@@ -5,5 +5,8 @@
 }
 label
 {
-    color: lightgreen
+    color: blue
+}
+ul{
+    list-style-type:none;
 }

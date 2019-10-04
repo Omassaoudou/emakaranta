@@ -9,6 +9,17 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
+  <br>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active" id="a1" style="margin-right:10px">
+                  <a class="btn btn-primary glyphicon glyphicon-arrow-left" routerLink="/administration/courses"></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
     <p style="text-align: center">
         <img src="../assets/img/creercours.png" alt="Girl in a jacket"  >
       </p>
@@ -21,24 +32,23 @@
       <h3 class=" btn-primary text-center">Nouveau Cours</h3> <br>
       <div class="row ">
         <div class="form-group col-xs-6">
-            <label class="col-sm-6 control-label" for="nomcomplet">Nom complet:</label>
+            <label class=" control-label" for="nomcomplet">Nom complet:</label>
             <input formControlName="nomcomplet" type="text" class="form-control">	
         </div>
         <div class="form-group col-xs-6">
-          <label class="col-sm-6 control-label" for="nomabr">Nom abregé:</label>
+          <label class="control-label" for="nomabr">Nom abregé:</label>
           <input formControlName="nomabr" type="text" class="form-control">
         </div>
         <div class="form-group col-xs-6">
-            <label class="col-sm-6 control-label" for="Categorie">Categorie:</label>
+            <label class="control-label" for="Categorie">Categorie:</label>
             <select formControlName="categorie" class="form-control">
-              <option value="1">1ere</option>
-              <option value="2">2nd</option>
-              <option value="3">3eme</option>
+              <option value="1">Littéraire</option>
+              <option value="2">Scientifique</option>
             </select>
             <!-- <input formControlName="categorie" type="number" class="form-control" value="1"> -->
         </div>
         <div class="form-group col-md-6">
-            <label class="col-sm-6 control-label" for="description">Description:</label>
+            <label class="control-label" for="description">Description:</label>
             <input formControlName="description" type="text" class="form-control">
         </div>
         <!-- <div class="form-group col-xs-6">

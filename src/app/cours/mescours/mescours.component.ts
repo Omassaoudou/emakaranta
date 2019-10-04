@@ -18,7 +18,7 @@ export class MescoursComponent implements OnInit {
   }
 
   getData(){
-    this.service.mescours().subscribe(res=>{
+    this.service.mescours().subscribe(res=>{ 
       this.mescours = res; 
       console.log(res);
     }, err=>{

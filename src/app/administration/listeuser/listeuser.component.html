@@ -2,13 +2,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active" style="margin-right:10px">
-              <a class="btn btn-info glyphicon glyphicon-arrow-left" href="#"></a>
+            <a class="btn btn-primary glyphicon glyphicon-home" href="#"></a>
         </li>
         <li class="nav-item active" style="margin-right:10px">
-            <a class="btn btn-info glyphicon glyphicon-home" href="#"></a>
-        </li>
-        <li class="nav-item active" style="margin-right:10px">
-          <a class="btn btn-info glyphicon glyphicon-plus glyphicon-plus" routerLink='../compteajout'>UTILISATEURS</a>
+          <a class="btn btn-primary glyphicon glyphicon-plus glyphicon-plus" routerLink='../compteajout'>&nbsp;<b>Utilisateurs</b></a>
         </li>
       </ul>
     </div>
@@ -25,45 +22,32 @@
 <body>
 
 <div class="container-fluid">
-  <h2 class="text-center btn-info"><b class="fa fa-list">&nbsp; liste des utilisateurs</b></h2>
+  <h2 class="text-center btn-primary"><b class="fa fa-list">&nbsp; liste des utilisateurs</b></h2>
  
   <table class="table table-bordered table-striped">
     <thead >
-      <tr class=" btn-info" >
+      <tr class=" btn-primary" >
         <th>Nom</th>
         <th>Prenom</th>
         <th>Email</th>
         <th>Dernier acces</th>
-        <th>Modifier</th>
-        
-       
-
+        <th class="text-center">Modifier</th>
+        <th class="text-center">Supprimer</th>
       </tr>
     </thead>
     <tbody id="myTable">
       <tr *ngFor="let user of users">
         <td>{{ user.firstname }}</td>
-        <td>{{ user.lastname   }}</td>
+        <td>{{ user.lastname }}</td> 
         <td>{{ user.email }}</td>
-        <td>{{ user.lastaccess}}</td>
-        <td ><a routerLink="/administration/option" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span></a></td>
-        
+        <td>{{ user.lastaccess}}</td>  
+        <td class="text-center" (click)="onClick(user.id)"><a class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span></a></td>
+        <td class="text-center" (click)="onClick(user.id)"><a class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a></td>
       </tr>
     </tbody>
   </table>
   
 </div>
-
-<script>
-$(document).ready(function(){
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#myTable tr").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-});
-</script>
 
 </body>
 </html>

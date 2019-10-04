@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active" style="margin-right:10px">
+              <a class="btn btn-info glyphicon glyphicon-arrow-left" href="#"></a>
+        </li>
+        <li class="nav-item active" style="margin-right:10px">
+            <a class="btn btn-info glyphicon glyphicon-home" href="#"></a>
+        </li>
+        <li class="nav-item active" style="margin-right:10px">
+          <a class="btn btn-info glyphicon glyphicon-plus glyphicon-plus" routerLink='../compteajout'>UTILISATEURS</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  
+</head>
+<body>
+
+<div class="container-fluid">
+  <h2 class="text-center btn-info"><b class="fa fa-list">&nbsp; liste des nouvels utilisateurs</b></h2>
+ 
+  <table class="table table-bordered table-striped">
+    <thead >
+      <tr class=" btn-info" >
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Email</th>
+        <th>Modifier</th>
+        
+       
+
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr *ngFor="let user of users">
+        <td>{{ user.firstname }}</td>
+        <td>{{ user.lastname   }}</td>
+        <td>{{ user.email }}</td>
+        <td ><a href="http://localhost/moodle/admin/webservice/tokens.php?sesskey=q7U8C2vPDh&action=create" target="_blank" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span></a></td>
+        
+      </tr>
+    </tbody>
+  </table>
+  
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+</body>
+</html>

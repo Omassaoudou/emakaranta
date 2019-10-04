@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { TokenGuardGuard } from './token-guard.guard';
+import { adminGuard } from './admin.guard';
 
 const routes: Routes = [
   {
@@ -72,7 +73,6 @@ const routes: Routes = [
     }
     ,{
       path: 'administration',
-      canActivate:[TokenGuardGuard],
       loadChildren: './administration/administration.module#AdministrationModule',
       data: {
         title: 'Administration'

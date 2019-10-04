@@ -1,5 +1,8 @@
 <div class="hold-transition register-page">
   <div class="register-box ">
+      <div class="card bg-red text-center">
+          <h4> {{message}} </h4>
+         </div>
     <div class="register-logo">
       <a routerLink="/register"><b>E-</b>Makaranta</a>
     </div>
@@ -28,14 +31,26 @@
             <input type="email" class="form-control" placeholder="Email" formControlName="email" ngModel required>
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
           </div>
-          <div class="form-group has-feedback">
-              <input type="text" class="form-control" placeholder="Pays" formControlName="pays" ngModel required>
-              <span class="fa fa-map-marker margin-r-5 form-control-feedback"></span>
-            </div>
         <div class="form-group has-feedback">
-          <input type="text" class="form-control" placeholder="Ville" formControlName="ville" ngModel required>
-          <span class="fa fa-map-marker margin-r-5 form-control-feedback"></span>
+          <h5>Région</h5>
+          <select class="form-control" formControlName="ville" ngModel required>
+            <option value="Niamey">Niamey</option>
+            <option value="Agadez">Agadez</option>
+            <option value="Diffa">Diffa</option>
+            <option value="Dosso">Dosso</option>
+            <option value="Maradi">Maradi</option>
+            <option value="Tahoua">Tahoua</option>
+            <option value="Tillaberi">Tillaberi</option>
+            <option value="Zinder">Zinder</option>
+            <option value="Autre">Autre</option>
+          </select>
+          <!-- <input type="text" class="form-control" placeholder="Ville" formControlName="ville" ngModel required>
+          <span class="fa fa-map-marker margin-r-5 form-control-feedback"></span> -->
         </div>
+        <div class="form-group has-feedback" hidden>
+          <input type="text" class="form-control" placeholder="Pays" formControlName="pays" value="Niger" >
+          <span class="fa fa-map-marker margin-r-5 form-control-feedback"></span>
+      </div>
         <div class="row">
           <div class="col-xs-8">
             <div class="checkbox icheck">
@@ -53,8 +68,15 @@
         </div>
       </form>
 
-      <a routerLink="/login" class="text-center">Déja inscrit</a>
+      <a routerLink="/login" class="text-center">Déja inscrit</a> 
     </div>
     <!-- /.form-box -->
+
+    
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+          <a href="/#/login"> Emakaranta.com</a>
+        </div>
+        <!-- Copyright -->
   </div>
 </div>

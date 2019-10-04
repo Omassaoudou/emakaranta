@@ -17,6 +17,7 @@ import { OptionComponent } from './option/option.component';
 import { AdminoptioncoursComponent } from './adminoptioncours/adminoptioncours.component';
 import { AdmincourseusersComponent } from './admincourseusers/admincourseusers.component';
 import { AdmingetcoursegradesComponent } from './admingetcoursegrades/admingetcoursegrades.component';
+import { ListnewuserComponent } from './listnewuser/listnewuser.component';
 
 const routes: Routes = [{
   path:'',
@@ -51,6 +52,10 @@ const routes: Routes = [{
   component:ListeuserComponent
 },
 {
+  path:'listnewuser',
+  component:ListnewuserComponent
+},
+{
   path:'course',
   component:CourseComponent
 },
@@ -67,7 +72,7 @@ const routes: Routes = [{
   component:CreercoursComponent
 },
 {
-  path:'option',
+  path:'option/:id',
   component:OptionComponent
 },
 {

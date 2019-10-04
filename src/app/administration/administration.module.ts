@@ -21,6 +21,7 @@ import { AdminoptioncoursComponent } from './adminoptioncours/adminoptioncours.c
 import { AdmincourseusersComponent } from './admincourseusers/admincourseusers.component';
 import { AdmingetcoursegradesComponent } from './admingetcoursegrades/admingetcoursegrades.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ListnewuserComponent } from './listnewuser/listnewuser.component';
 
 @NgModule({
   declarations: [AdministrationComponent, 
@@ -40,6 +41,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     AdminoptioncoursComponent,
     AdmincourseusersComponent,
     AdmingetcoursegradesComponent,
+    ListnewuserComponent,
     
   ],
   imports: [

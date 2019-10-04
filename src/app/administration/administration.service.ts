@@ -17,15 +17,35 @@ export class AdministrationService {
     return this.http.get(this.API_URL + utilisateur);
   }
 
+  profil(id: number):Observable<any>{
+    const token = 'wstoken=c9f81d1c77bd8a585284cde023753870&wsfunction=core_user_get_users&moodlewsrestformat=json&criteria[0][key]=id';
+    const tok ='&criteria[0][value]='+id;
+    console.log(tok);
+    
+    return this.http.get(this.API_URL + token +tok);  
+  }
+
   admincourseusers(id: number):Observable<any>{
     const utilisateur = 'wstoken=c9f81d1c77bd8a585284cde023753870&wsfunction=core_enrol_get_enrolled_users &moodlewsrestformat=json';
     const tok ='&courseid='+id
     return this.http.get(this.API_URL + utilisateur +tok); 
   }
 
+  mescours(id: number):Observable<any>{
+    const mescours = 'wstoken=c9f81d1c77bd8a585284cde023753870&wsfunction=core_enrol_get_users_courses&moodlewsrestformat=json';  
+    const tok ='&userid='+id
+    return this.http.get(this.API_URL + mescours + tok);   
+  }
+
   courses():Observable<any>{
     const cours = 'wstoken=c9f81d1c77bd8a585284cde023753870&wsfunction=core_course_get_courses &moodlewsrestformat=json';   
     return this.http.get(this.API_URL + cours);
+  } 
+
+  courseS(id: number):Observable<any>{
+    const cours = 'wstoken=c9f81d1c77bd8a585284cde023753870&wsfunction=core_course_delete_courses&moodlewsrestformat=json';  
+    const tok ='&courseid='+id 
+    return this.http.get(this.API_URL + cours +tok);
   } 
 
   creercours( nomcomplet: string, nomabr: string, categorie: number, description: string):Observable<any>{
@@ -41,4 +61,24 @@ export class AdministrationService {
     console.log(this.API_URL + tok +credentials);
     return this.http.post(this.API_URL + tok +credentials, null);
   }
+
+  compteModif(userId: number, username: string, nom: string,prenom: string, email:string):Observable<any>{
+    const tok = 'wstoken=c9f81d1c77bd8a585284cde023753870&wsfunction=core_user_update_users&moodlewsrestformat=json'
+    const credentials ='&users[0][id]='+userId +'&users[0][username]='+username +'&users[0][lastname]='+nom +'&users[0][firstname]='+prenom +'&users[0][email]='+email +'&users[0][lang]=fr' 
+    console.log(this.API_URL + tok +credentials);
+    return this.http.post(this.API_URL + tok +credentials, null);
+  }
+
+  role(id: number, userId: number):Observable<any>{
+    const cours = 'wstoken=c9f81d1c77bd8a585284cde023753870&wsfunction=enrol_manual_enrol_users &moodlewsrestformat=json&enrolments[0][roleid]=5';  
+    const tok ='&enrolments[0][userid]='+userId +'&enrolments[0][courseid]='+id
+    return this.http.post(this.API_URL + cours +tok, null);
+  }
+  
+  roleSup(id: number, userId: number):Observable<any>{
+    const cours = 'wstoken=c9f81d1c77bd8a585284cde023753870&wsfunction=enrol_manual_unenrol_users&moodlewsrestformat=json&enrolments[0][roleid]=5';  
+    const tok ='&enrolments[0][userid]='+userId+'&enrolments[0][courseid]='+id
+    return this.http.post(this.API_URL + cours +tok, null);
+  }
+ 
 }

@@ -4,15 +4,22 @@
 
   <title>Bootstrap Example</title>
 
-  <meta charset="utf-8">
+  <meta charset="utf-8"> 
 
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 </head>
 <body>
-    <p style="text-align: center">
-        <img src="../assets/img/user.png" alt="Girl in a jacket"  >
-      </p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active" id="a1" style="margin-right:10px">
+                  <a class="btn btn-primary glyphicon glyphicon-arrow-left" routerLink="/administration/listeuser"></a>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
     <div class="container" >
 
         <div class="row"> 
@@ -21,34 +28,57 @@
     <div class="col-md-12">
       <h3 class=" btn-primary text-center">Nouvel utilisateur</h3> <br>
       <div class="row ">
-        <div class="form-group has-feedback">
-          <input type="text" class="form-control" placeholder="Nom d'utilisateur" formControlName="username"> 
-          <span class="glyphicon glyphicon-user form-control-feedback"></span>
+        <div>
+        <div class="form-group has-feedback col-xs-6">
+          <label for="">Nom d'utilisateur</label>
+          <input type="text" class="form-control" placeholder="" formControlName="username"> 
+          <span class=" form-control-feedback"></span>
         </div>
-        <div class="form-group has-feedback">
-            <input type="password" class="form-control" placeholder="Mot de passe" formControlName="password">
-            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        <div class="form-group has-feedback col-xs-6">
+            <label for="">Mot de passe</label>
+            <input type="password" class="form-control" placeholder="" formControlName="password">
+            <span class=" form-control-feedback"></span>
           </div>
-        <div class="form-group has-feedback">
-          <input type="text" class="form-control" placeholder="nom" formControlName="nom">
-          <span class="glyphicon glyphicon-user form-control-feedback"></span>
         </div>
-        <div class="form-group has-feedback">
-            <input type="text" class="form-control" placeholder="prenom" formControlName="prenom">
-            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+        <div>
+        <div class="form-group has-feedback col-xs-6">
+          <label for="">Nom</label>
+          <input type="text" class="form-control" placeholder="" formControlName="nom">
+          <span class=" form-control-feedback"></span>
+        </div>
+        <div class="form-group has-feedback col-xs-6">
+          <label for="">Prénom</label>
+            <input type="text" class="form-control" placeholder="" formControlName="prenom">
+            <span class=" form-control-feedback"></span>
           </div>
-        <div class="form-group has-feedback">
-            <input type="email" class="form-control" placeholder="Email" formControlName="email">
-            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        </div>
+        <div>
+        <div class="form-group has-feedback col-xs-6">
+          <label for="">Email</label>
+            <input type="email" class="form-control"  formControlName="email">
+            <span class=" form-control-feedback"></span>
           </div>
-          <div class="form-group has-feedback">
-              <input type="text" class="form-control" placeholder="pays" formControlName="pays">
-              <span class="fa fa-map-marker margin-r-5 form-control-feedback"></span>
+          <div class="form-group has-feedback col-xs-6">
+              <label for="">Région</label>
+              <select class="form-control" formControlName="ville" ngModel required>
+                <option value="Niamey">Niamey</option>
+                <option value="Agadez">Agadez</option>
+                <option value="Diffa">Diffa</option>
+                <option value="Dosso">Dosso</option>
+                <option value="Maradi">Maradi</option>
+                <option value="Tahoua">Tahoua</option>
+                <option value="Tillaberi">Tillaberi</option>
+                <option value="Zinder">Zinder</option>
+                <option value="Autre">Autre</option>
+              </select>
+              <!-- <input type="text" class="form-control" placeholder="Ville" formControlName="ville" ngModel required>
+              <span class="fa fa-map-marker margin-r-5 form-control-feedback"></span> -->
             </div>
-        <div class="form-group has-feedback">
-          <input type="text" class="form-control" placeholder="ville" formControlName="ville">
-          <span class="fa fa-map-marker margin-r-5 form-control-feedback"></span>
-        </div>
+          </div>
+        <div class="form-group has-feedback" hidden>
+            <input type="text" class="form-control" placeholder="pays" formControlName="pays" value="Niger">
+            <span class="fa fa-map-marker margin-r-5 form-control-feedback"></span>
+          </div>
       </div>
       <br>
       <div id="div1">

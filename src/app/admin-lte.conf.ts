@@ -15,7 +15,10 @@ export const adminLteConf = {
 
     // {label: 'Profil', route: 'profil', iconClasses: 'fa fa-user'},
 
-    {label: 'Mes Cours', route: 'cours/mescours', iconClasses: 'fa fa-book'},
+    {label: 'Mes Cours', iconClasses: 'fa fa-book', children: [
+      {label: 'Electronique ', route: 'cours/mescours'},
+      {label: 'En live ', route: ''}
+    ]},
 
 
     // {label: 'Messages', route: 'message', iconClasses: 'fa fa-text'},
@@ -40,8 +43,9 @@ export const adminLteConf = {
     // {label: 'ProfileEditor', route: 'profileeditor', iconClasses: 'fa fa-code'},
 
     {label: 'Administration du site', iconClasses: 'fa fa-code', children: [
+      {label: 'Cours', route: 'administration/courses'},
       {label: 'Utilisateurs', route: 'administration/listeuser'},
-      {label: 'Cours', route: 'administration/courses'}
-    ]},
+      {label: 'Nouvels utilisateurs', route: 'administration/listnewuser'}
+      ]},
   ]
 };

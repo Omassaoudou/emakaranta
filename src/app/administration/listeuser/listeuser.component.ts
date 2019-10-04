@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AdministrationService } from '../administration.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listeuser',
@@ -10,7 +11,7 @@ export class ListeuserComponent implements OnInit {
 
   users: any;
 
-  constructor(private service: AdministrationService) { } 
+  constructor(private service: AdministrationService, private router: Router) { } 
 
   ngOnInit() {
     this.getData();
@@ -23,6 +24,9 @@ export class ListeuserComponent implements OnInit {
       }, err=>{
         console.error(err);
       }); 
+    }
+    onClick(userId){
+      this.router.navigate(['/administration/option', userId]);
     }
 
 }

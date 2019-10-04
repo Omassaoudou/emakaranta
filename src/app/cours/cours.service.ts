@@ -22,9 +22,9 @@ export class CoursService {
     return this.http.get(this.API_URL + mescours);   
   }
 
-  cours():Observable<any>{
+  cours(id: number):Observable<any>{
     const mescours = 'wstoken=c9f81d1c77bd8a585284cde023753870&wsfunction=core_course_get_courses%20&moodlewsrestformat=json';  
-    const cour='&options[ids][0]=2';
+    const cour='&options[ids][0]='+id;
     return this.http.get(this.API_URL + mescours + cour);     
   }
   

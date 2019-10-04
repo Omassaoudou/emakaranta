@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   profileForm: FormGroup;
   token: any;
+  message: any;
 
   constructor(private loginService: LoginService, private router: Router) { } 
 
@@ -24,9 +25,11 @@ export class LoginComponent implements OnInit {
   onSubmit(): void {
     this.loginService.login(this.profileForm.value.email, this.profileForm.value.password).subscribe(res=>{
       this.token = res.token;
+      this.message = "Nom d'utilisateur ou mot de passe incorrect, veuillez réessayer";
       console.log(res);
       localStorage.setItem('token', this.token);
       if(this.token){
+        this.message = res.error;
         this.router.navigate(['/accueil']);
       }
      

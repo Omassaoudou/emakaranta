@@ -20,14 +20,14 @@ export class LirecoursComponent implements OnInit {
     this.getData();
     this.idCour = this.route.snapshot.params['id'];
 
-    this.service.lirecours(this.idCour).subscribe(res=>{
+    this.service.lirecours(this.idCour).subscribe(res=>{ 
       this.lirecours = res; 
       console.log(res); 
     }, err=>{
       console.error(err); 
     });
 
-    this.service.cours().subscribe(res=>{  
+    this.service.cours(this.idCour).subscribe(res=>{  
       this.cours = res; 
     }, err=>{
       console.error(err); 
